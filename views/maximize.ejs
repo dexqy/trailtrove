@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full post</title>
+    <link rel="stylesheet" href="/stylesheets/max.css">
+</head>
+<body>
+    <div class="card">
+        <img src="/images/<%= post.image %>">
+        <div class="card-body">
+          <h5 class="card-title"><%= post.title %></h5> 
+          <p class="card-text card-content"><%= post.description %></p> 
+          <a href="<%= post.link %>" class="btn btn-primary">visit</a>
+        </div>
+      </div>
+</body>
+</html>

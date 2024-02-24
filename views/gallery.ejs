@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery Page</title>
+<link rel="stylesheet" href="/stylesheets/gallery.css">
+</head>
+<body>
+    <nav>
+        <h3>Trailtrove</h3>
+        <ul>
+          
+            <li ><a href="/profile">profile</a></li>
+            <li><a href="/feed">feed</a></li>
+            <li><a href="/logout">logout</a></li>
+          </ul>
+      </nav>
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
+    centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+    <swiper-slide><img src="/images/photos/eleven.webp" alt="Slide 1"></swiper-slide>
+    <swiper-slide><img src="/images/photos/twelve.webp" alt="Slide 2"></swiper-slide>
+    <swiper-slide><img src="/images/photos/thirteen.jpeg" alt="Slide 3"></swiper-slide>
+    <swiper-slide><img src="/images/photos/fourteen.jpeg" alt="Slide 4"></swiper-slide>
+    <swiper-slide><img src="/images/photos/three.jpeg" alt="Slide 5"></swiper-slide>
+    <swiper-slide><img src="/images/photos/eight.jpeg" alt="Slide 6"></swiper-slide>
+    <swiper-slide><img src="/images/photos/seven.jpeg" alt="Slide 7"></swiper-slide>
+    <swiper-slide><img src="/images/photos/six.jpeg" alt="Slide 8"></swiper-slide>
+    <swiper-slide><img src="/images/photos/five.webp" alt="Slide 9"></swiper-slide>
+    <div class="autoplay-progress" slot="container-end">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+</swiper-container>
+
+      
+<div class="container">
+  <h1>Gallery</h1>
+  <div class="gallery">
+    <!-- Sample gallery items, replace with your own images -->
+    <div class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?asia" alt="Asia">
+    </div>
+    <div class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?africa" alt="Africa">
+    </div>
+    <div class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?north-america" alt="North America">
+    </div>
+    <div class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?south-america" alt="South America">
+    </div>
+    <div class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?europe" alt="Europe">
+    </div>
+    <div class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?oceania" alt="Oceania">
+    </div>
+    <div class="gallery-item">
+      <img src="https://source.unsplash.com/400x300/?antarctica" alt="Antarctica">
+    </div>
+    <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?beach" alt="Beach">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?mountain" alt="Mountain">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?city" alt="City">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?nature" alt="Nature">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?landscape" alt="Landscape">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?travel" alt="Travel">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?adventure" alt="Adventure">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?exploration" alt="Exploration">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?landscape" alt="Landscape">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?sunset" alt="Sunset">
+      </div>
+      <div class="gallery-item">
+        <img src="https://source.unsplash.com/400x300/?forest" alt="Sunset">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p>  <i class="fa-solid fa-copyright"></i>all rights reserved develeoped in  uws</p>
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  const progressCircle = document.querySelector(".autoplay-progress svg");
+  const progressContent = document.querySelector(".autoplay-progress span");
+
+  const swiperEl = document.querySelector("swiper-container");
+  swiperEl.addEventListener("autoplaytimeleft", (e) => {
+    const [swiper, time, progress] = e.detail;
+    progressCircle.style.setProperty("--progress", 1 - progress);
+    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+  });
+</script>
+</body>
+</html>

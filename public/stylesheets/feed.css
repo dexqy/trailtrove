@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nb;
+  }
+  
+  @font-face {
+    font-family: nb;
+    src: url(/images/Rejouice-Headline.ttf);
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 2px 2px;
+   margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+   
+  }
+  nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  
+    
+  }
+  nav h3{
+    font-size:30px;
+    color: black;
+    
+  }
+  nav ul li a{
+    font-size: 3.5vh;
+    margin: 0px 50px;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 50px;
+    color: black;
+    
+  } 
+  nav ul li a:hover{
+    background-color: green;
+    opacity: 1;
+    color: white;
+    font-weight: 900;
+  }
+  .card1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 8px; /* Adjust the radius to your preference */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin: 7px 7px;
+  }
+  .linkage{
+    color: green;
+  }
+  
+  .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
+  .card-title{
+    margin-bottom: 4px;
+    font-size: 30px;
+  }
+ 
+  .card-body a{
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 10px;
+    background-color:#198754;
+  }
+  .headding{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    border-bottom: 30px;
+    margin: 30px 10px;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height:400px;
+    object-fit: cover;
+  }
+    /* this is the csss of the swiper */
+  
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+  
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .image-name {
+      text-align: center;
+      margin-top: 500px; /* Adjust as needed */
+      margin-left: -200px;
+      font-weight: bold;
+  }
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+  }
+  

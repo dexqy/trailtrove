@@ -1,0 +1,17 @@
+.card img{
+    width: 100%;
+    align-items: center;
+    object-fit: cover;
+    height: 500px;
+}
+.card-body{
+    align-items: center;
+}
+.card-title{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+.card-text{
+    font-size: 30px;
+}

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/register.css">
+</head>
+<body> 
+	<div class="main">
+        <video id="video-background" autoplay muted loop>
+
+            <source src="/images/video (2160p).mp4" type="video/mp4">
+        </video> 
+		<h1>TRAILTROVE</h1> 
+		<form  class="form" action="/register" method="post"> 
+			<label for="name">Name:</label> 
+			<input type="text" id="name"
+				name="name"
+				placeholder="Enter your first name" required> 
+
+			<label for="username">userName:</label> 
+			<input type="username" id="username"
+				name="username"
+				placeholder="Enter your last name" required> 
+
+			<label for="email">Email:</label> 
+			<input type="email" id="email"
+				name="email"
+				placeholder="Enter your email" required> 
+
+			<label for="password">Password:</label> 
+			<input type="password" id="password"
+				name="password"
+				placeholder="Enter your password"
+				pattern= 
+				"^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$" required				 
+				title="Password must contain at least one number, 
+					one alphabet, one symbol, and be at 
+					least 8 characters long"> 
+                    
+			<label for="description">description</label> 
+			<input type="text" id="description"
+				name="description"
+				placeholder="write about yourself" required> 
+
+			<div class="wrap"> 
+				<button type="submit" > 
+				Submit 
+				</button> 
+			</div> 
+		</form> 
+	</div> 
+
+</body> 
+</html>

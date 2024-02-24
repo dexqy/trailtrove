@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  
+  nav ul{
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  nav ul li {
+    list-style: none;
+    padding: 15px 35px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+  }
+  nav ul li::after {
+    content: "";
+    background: green;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+  }
+  nav ul li:hover {
+    color: #fff;
+  }
+  nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+  }
+  
+  
+  

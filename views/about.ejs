@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us - TrailTrove</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 1s ease;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            animation: fadeIn 2s ease;
+        }
+        h1, h2 {
+            color: #333;
+            transition: color 1s ease;
+        }
+        p {
+            line-height: 1.6;
+            transition: color 1s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        body:hover {
+            background-color: #e8f5e9;
+        }
+        h1:hover, h2:hover, p:hover {
+            color: #4caf50;
+        }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  font-size: 20px;  
+  border: none;
+  background-color: inherit;
+  color: black;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {
+  background-color: green;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 7px 7px;
+  border-bottom: 2px solid black;
+ 
+  
+}
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  
+}
+nav h3{
+  font-size: 3.5vh;
+  
+}
+nav ul li a{
+  font-size: 3.5vh;
+  margin: 0px 50px;
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 50px;
+  color: black;
+  
+} 
+nav ul li a:hover{
+  background-color: green;
+  opacity: 1;
+  font-weight: 900;
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <h3>Trailtrove</h3>
+            <ul>
+                <li><a href="/login">login</a></li>
+                <li><a href="/register">register</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">tools</a>
+                    <div class="dropdown-content">
+                        <a href="/convertor">currency convertor</a>
+                        <a href="/budgetcalc">budget calculator</a>
+                    </div>
+                </li>
+                <li><a href="/">home</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <h1>About Us</h1>
+            <p>At TrailTrove, we take pride in being your gateway to diverse destinations across the globe. Immerse yourself in the beauty of unknown landscapes, vibrant cultures, and hidden gems, all from the comfort of your screen.</p>
+    
+            <h2>Our Community</h2>
+            <p>As avid supporters of the travel community, we invite you to not only be spectators but active participants in the journey. Our platform showcases captivating blogs written by fellow travelers, sharing their unique experiences and valuable insights. It's a tapestry of narratives that inspire, inform, and connect us through the shared passion for exploration.</p>
+    
+            <h2>Support Us</h2>
+            <p>To sustain this community and continue bringing you enriching content, we seek your support. Explore our sponsored travel items carefully curated for modern explorers. By purchasing these items through our website, you not only equip yourself for your next adventure but also contribute to the vitality of this travel hub. Every purchase supports the growth of our platform, ensuring we can keep providing you with a window to the wonders of the world.</p>
+    
+            <h2>Our Tools</h2>
+            <p>We also provide budget tools and a currency converter to assist you in planning your travels.</p>
+        </div>
+    </div>
+</body>
+</html>

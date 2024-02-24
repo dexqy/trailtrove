@@ -1,0 +1,243 @@
+*{margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:nb;
+  
+
+}
+@font-face {
+  font-family:nb;
+  src: url(/images/Rejouice-Headline.ttf);
+}
+html{
+  height: 100%;
+  width: 100%;
+  
+}
+.page1{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(247, 240, 255, 0);
+  position: relative;
+}
+.page1 video{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  
+
+}
+.pg1ct{
+  width: 100%;
+  height: 100%;
+  position:relative;
+  z-index: 3;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center; 
+  padding: 3vw 3vw;
+  
+}
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  
+}
+nav h3{
+  font-size: 3.5vh;
+  
+}
+nav ul li a{
+  font-size: 3.5vh;
+  margin: 0px 50px;
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 10px 10px;
+  border-radius: 50px;
+  
+} 
+nav ul li a:hover{
+  background-color: green;
+  opacity: 1;
+  color: white;
+  font-weight: 900;
+}
+
+
+.head{
+  font-family: nb;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  font-size: 5rem;
+  color: white;
+  font-weight: 100;
+}
+
+
+
+
+.page3{
+  height: 100vh;
+  width: 90vw;
+
+}
+.page3h{
+  margin-top: 10vw;
+  margin-bottom: 10vw;
+text-align: center;
+}
+.s2{
+  background-color: black;
+  color: white;
+  border-radius: 20%;
+  font-weight: 300;
+  padding: 3px;
+  font-size: 12px;
+}
+.page3 h1{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem;
+}
+.page3ct{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin: 20px 20px;
+}
+.page3ct{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin: 20px 20px ;
+
+  
+}
+.box{
+  width: 32%;
+  height: 100%;
+  position: relative;
+
+}
+.box video{
+  object-fit: cover;
+  width: 100%;
+  height: 90%;
+  opacity: 1;
+  object-position: center;
+}
+.box img{
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  object-fit:cover;
+  transition: all linear 1s;
+}
+.box:hover img{
+  opacity: 0;
+  
+}
+.content{
+  margin: 20% 20px 80px 20px;
+  font-size: 1.5rem;
+
+  
+}
+.mapcontainer{
+  width: 100%; 
+  position: relative;
+
+}
+.map h1{
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+}
+.country{
+  stroke: #000000; /* Black border color */
+  stroke-width: 1; /* Border width */
+}
+
+/* Hover style for countries */
+.country:hover {
+  fill: #b3b3b3 !important; /* Change fill color on hover */
+}
+#tooltip {
+  position: absolute;
+  display: none;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 10000;
+
+}
+/* Default style for the element with ID 'cnt' */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 50px;
+}
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button style */
+.dropbtn {
+  font-size: 20px;  
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: green;
+}
+
+/* Show the dropdown menu when hovering or clicking on the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+  
+
+
+
+
+
+

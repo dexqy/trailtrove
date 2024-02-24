@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="\stylesheets\profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <nav>
+    <h3>Trailtrove</h3>
+    <ul>
+      
+        <li ><a href="#mblogs">my blogs</a></li>
+        <li><a href="/feed">feed</a></li>
+        <li><a href="/gallery">gallery</a></li>
+        <li><a href="/logout">logout</a></li>
+      </ul>
+  </nav>
+
+    <div class="wrap">
+      <div class="cardr">
+
+        <div class="profile-picture">
+          <img src="/images/<%=user.dp %>" alt="Profile Picture">
+        </div>
+        <span class="icon">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </span>
+        <h2 class="name"><%= user.username %></h2>
+        <h3 class="username"><%= user.name %></h3>
+        <p class="tagline"><%= user.email %></p>
+        <p class="description"><%= user.description %></p>
+        
+        <form class="upload" hidden action="/profileupload" method="post" enctype="multipart/form-data">
+            <input type="file" name="pic">
+          </form>
+          <a href="/add" class="nwpost"> new post</a>
+      </div>
+      
+  </div>
+    </div>
+  <div class="blogs">
+    <h1>my blogs</h1>
+  
+    <div class="card1" id="mblogs">
+      <% user.posts.forEach(function(post) { %>
+        <div class="card">
+          <img src="/images/<%=post.image%>">
+          <div class="card-body">
+            <p class="linkage"><%=post.link%></p>
+            <h5 class="card-title"><%=post.title%></h5> 
+            <p class="card-text"><%=post.description%></p>
+<div class="buttons">
+  <a href="/fullpost/<%= post._id %>" class="btn btn-success">read more</a>
+  <a href="/delete/<%= post._id %>" class="btn btn-danger delete-post" data-post-id="<%= post._id %>">
+    <i class="fas fa-trash-alt"></i> 
+  </a>
+</div>
+
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+  <div class="footer">
+    <p>  <i class="fa-solid fa-copyright"></i>all rights reserved develeoped in  uws</p>
+    </div>
+
+  <!-- Script to truncate description to 32 words -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var cardTexts = document.querySelectorAll(".card-text");
+      cardTexts.forEach(function(text) {
+        var words = text.textContent.split(" ");
+        if (words.length > 32) {
+          text.textContent = words.slice(0, 32).join(" ") + "...";
+        }
+      });
+    });
+    
+    // Script for file upload
+    document.querySelector(".icon").addEventListener('click',function(){
+      document.querySelector(".upload input").click();
+    });
+    document.querySelector(".upload input").addEventListener('change', function(){
+      document.querySelector(".upload").submit();
+    });
+ </script>
+
+
+</body>
+</html>
